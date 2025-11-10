@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class EnemySpavn : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject enemyPref;
+    public Transform SpawnPoint;
+    public float spawnInterval = 1.0f;
 
-    // Update is called once per frame
+    private float _timeSinceLastSpawn = 0.0f;
+
     void Update()
     {
-        
+        _timeSinceLastSpawn += Time.deltaTime;
+
+        if (_timeSinceLastSpawn >= spawnInterval)
+        {
+            _timeSinceLastSpawn = 0.0f;
+            Instantiate(enemyPref, SpawnPoint.position, SpawnPoint.rotation);
+        }
     }
 }

@@ -4,13 +4,29 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public static int xp = 10;
+    public GameObject player;
+    public int xp = 3;
+    public GameObject goose;
+    
 
-    void Update()
+    void Start()
     {
-        if (xp <= 0)
+        xp = 4;
+        goose.SetActive(false);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+
+        if (other.CompareTag("Enemy"))
         {
-            Destroy(gameObject);
+            xp -= 1;
+            Destroy(other.gameObject);
+            if (xp <= 0)
+            {
+                goose.SetActive(true);
+                Destroy(player);
+            }
         }
     }
 }

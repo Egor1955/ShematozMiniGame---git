@@ -9,6 +9,11 @@ public class AttackCount : MonoBehaviour
     public TextMeshProUGUI CoinText;
     public int AttackMax = 35;
 
+    void Start()
+    {
+        AttackCoin = 0;
+    }
+
     void Update()
     {
         CoinText.text = "Power: " + ((int)AttackCoin).ToString();

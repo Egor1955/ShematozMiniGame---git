@@ -4,13 +4,26 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public static int xpEN = 10;
+    public int xpEN = 3;
+    public GameObject panelWin;
 
-    void Update()
+    void Start()
     {
-        if (xpEN <= 0)
+        xpEN = 3;
+        panelWin.SetActive(false);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Unit"))
         {
-            Destroy(gameObject);
+            xpEN -= 1;
+            Destroy(other.gameObject);
+            if (xpEN <= 0)
+            {
+                panelWin.SetActive(true);
+                Destroy(gameObject);
+            }
         }
     }
 }
