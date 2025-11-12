@@ -5,12 +5,14 @@ public class UnitPlacer : MonoBehaviour
     public GameObject unitPrefab;
     public LayerMask placementLayer;
     public GameObject spawnZone;
+    public float price = 6f;
     private bool isPlacing = false;
     private GameObject currentUnit;
+    
 
     void Update()
     {
-        if (isPlacing && Input.GetMouseButtonDown(0))
+        if (isPlacing && Input.GetMouseButtonDown(0) && AttackCount.AttackCoin >= price)
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
@@ -18,6 +20,7 @@ public class UnitPlacer : MonoBehaviour
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, placementLayer))
             {
                 currentUnit = Instantiate(unitPrefab, hit.point, Quaternion.identity);
+                AttackCount.AttackCoin -= price;
                 StopPlacing();
             }
         }

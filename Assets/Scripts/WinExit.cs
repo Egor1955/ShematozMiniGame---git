@@ -9,6 +9,12 @@ public class WinExit : MonoBehaviour
     public float timetoexit = 5;
     public TextMeshProUGUI endtime;
 
+
+    public void Start()
+    {
+        
+    }
+
     public void Update()
     {
         endtime.text = ((int)timetoexit).ToString();

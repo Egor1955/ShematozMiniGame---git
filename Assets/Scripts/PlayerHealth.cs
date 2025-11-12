@@ -7,13 +7,13 @@ public class PlayerHealth : MonoBehaviour
 {
     public GameObject player;
     public int xp = 3;
-    public GameObject goose;
+    public GameObject Fail;
     public Image hp_img;
 
     void Start()
     {
         xp = 4;
-        goose.SetActive(false);
+        Fail.SetActive(false);
     }
    
 
@@ -26,7 +26,7 @@ public class PlayerHealth : MonoBehaviour
             Destroy(other.gameObject);
             if (xp <= 0)
             {
-                goose.SetActive(true);
+                Fail.SetActive(true);
                 Destroy(player);
             }
             hp_img.fillAmount = xp / 4f;
