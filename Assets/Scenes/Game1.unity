@@ -2729,7 +2729,7 @@ MonoBehaviour:
   placementLayer:
     serializedVersion: 2
     m_Bits: 64
-  spawn_zone: {fileID: 1718427987}
+  spawnZone: {fileID: 1718427987}
 --- !u!4 &1496507778
 Transform:
   m_ObjectHideFlags: 0

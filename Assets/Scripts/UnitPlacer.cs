@@ -26,12 +26,12 @@ public class UnitPlacer : MonoBehaviour
     public void StartPlacing()
     {
         isPlacing = true;
-        spawn_zone.SetActive(isPlacing);
+        spawnZone.SetActive(isPlacing);
     }
 
     private void StopPlacing()
     {
         isPlacing = false;
-        spawn_zone.SetActive(isPlacing);
+        spawnZone.SetActive(isPlacing);
     }
 }
