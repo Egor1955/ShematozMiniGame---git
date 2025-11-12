@@ -99,7 +99,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.6
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6255382930738939219
 MonoBehaviour:
@@ -115,6 +115,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyTov: {fileID: 7866907978731277838, guid: e59fbd805840bf04d8a4f864c7830afd,
     type: 3}
+  LookRadius: 2
+  speedOB: 2.5
+  speedAT: 10
+  Enemy: {fileID: 5661088888747441638, guid: a6b21c456e51a964ea65a03669c03395, type: 3}
 --- !u!195 &5137126957965922586
 NavMeshAgent:
   m_ObjectHideFlags: 0
