@@ -4,7 +4,7 @@ public class UnitPlacer : MonoBehaviour
 {
     public GameObject unitPrefab;
     public LayerMask placementLayer;
-
+    public GameObject spawnZone;
     private bool isPlacing = false;
     private GameObject currentUnit;
 
@@ -26,12 +26,12 @@ public class UnitPlacer : MonoBehaviour
     public void StartPlacing()
     {
         isPlacing = true;
-        Debug.Log("Выберите место для юнита");
+        spawn_zone.SetActive(isPlacing);
     }
 
     private void StopPlacing()
     {
         isPlacing = false;
-        Debug.Log("Юнит размещен");
+        spawn_zone.SetActive(isPlacing);
     }
 }

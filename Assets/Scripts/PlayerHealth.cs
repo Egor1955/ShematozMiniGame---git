@@ -19,7 +19,6 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(xp);
         if (other.CompareTag("Enemy"))
         {
 
@@ -30,8 +29,6 @@ public class PlayerHealth : MonoBehaviour
                 goose.SetActive(true);
                 Destroy(player);
             }
-            // Debug.Log(xp);
-            // Debug.Log(xp / 4);
             hp_img.fillAmount = xp / 4f;
         }
     }
