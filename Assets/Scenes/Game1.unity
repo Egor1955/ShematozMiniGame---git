@@ -2729,6 +2729,7 @@ MonoBehaviour:
   placementLayer:
     serializedVersion: 2
     m_Bits: 64
+  spawn_zone: {fileID: 1718427987}
 --- !u!4 &1496507778
 Transform:
   m_ObjectHideFlags: 0
@@ -3176,7 +3177,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &1718427988
 MeshCollider:
   m_ObjectHideFlags: 0
