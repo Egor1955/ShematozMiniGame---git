@@ -27,9 +27,11 @@ public class UnitPlacer : MonoBehaviour
     }
 
     public void StartPlacing()
-    {
-        isPlacing = true;
-        spawnZone.SetActive(isPlacing);
+    {   
+        if (AttackCount.AttackCoin >= price){
+            isPlacing = true;
+            spawnZone.SetActive(isPlacing);
+        }
     }
 
     private void StopPlacing()

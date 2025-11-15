@@ -7,6 +7,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public GameObject player;
     public int xp = 3;
+    public GameObject panelWin;
     public GameObject Fail;
     public Image hp_img;
 
@@ -26,7 +27,7 @@ public class PlayerHealth : MonoBehaviour
             Destroy(other.gameObject);
             if (xp <= 0)
             {
-                Fail.SetActive(true);
+                if(!panelWin.activeSelf) Fail.SetActive(true);
                 Destroy(player);
             }
             hp_img.fillAmount = xp / 4f;
